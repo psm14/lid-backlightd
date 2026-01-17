@@ -1,0 +1,18 @@
+[Unit]
+Description=dim internal backlight on lid close (logind dbus)
+After=multi-user.target
+Wants=systemd-logind.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/lid-backlightd
+Restart=always
+RestartSec=1
+NoNewPrivileges=true
+ProtectHome=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/sys/class/backlight
+
+[Install]
+WantedBy=multi-user.target
