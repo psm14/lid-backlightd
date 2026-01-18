@@ -42,3 +42,7 @@ sudo dpkg -i dist/deb/lid-backlightd_*.deb
 busctl get-property org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager LidClosed
 sudo /usr/bin/lid-backlightd --log-level debug
 ```
+
+## License
+
+WTFPL. See `LICENSE`.
