@@ -1,6 +1,6 @@
 # lid-backlightd
 
-Made this because I repurposed an old XPS laptop as a server, and when configuring it to not sleep when the lid closed the screen would stay on.
+Made this because I repurposed an old XPS laptop as a server, and when configuring it to not sleep when the lid closed the screen would stay on. This forces the screen off when the lid is closed by listening on dbus. On my machine it sits at ~5mb of memory and mostly does nothing cpu-wise. It was also vibe-coded and I am pretty satisfied with the result given the small effort I put into this. Alright, the rest of this readme is generated:
 
 ## Build
 
