@@ -1,6 +1,6 @@
 # lid-backlightd
 
-Simple daemon to dim the internal backlight on lid close using logind DBus signals.
+Made this because I repurposed an old XPS laptop as a server, and when configuring it to not sleep when the lid closed the screen would stay on.
 
 ## Build
 
