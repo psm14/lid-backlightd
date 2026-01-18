@@ -11,10 +11,17 @@ cargo build --release
 ## Install
 
 ```bash
-sudo install -m 0755 target/release/lid-backlightd /usr/local/bin/
+sudo install -m 0755 target/release/lid-backlightd /usr/bin/
 sudo install -m 0644 lid-backlightd.service /etc/systemd/system/lid-backlightd.service
 sudo systemctl daemon-reload
 sudo systemctl enable --now lid-backlightd
+```
+
+## Debian/Ubuntu package
+
+```bash
+scripts/build-deb.sh
+sudo dpkg -i dist/deb/lid-backlightd_*.deb
 ```
 
 ## Flags
@@ -33,5 +40,5 @@ sudo systemctl enable --now lid-backlightd
 
 ```bash
 busctl get-property org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager LidClosed
-sudo /usr/local/bin/lid-backlightd --log-level debug
+sudo /usr/bin/lid-backlightd --log-level debug
 ```
